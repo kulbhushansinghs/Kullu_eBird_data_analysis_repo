@@ -1,0 +1,18 @@
+Date,Number of nests,Number of chicks,Number of adults,Remarks
+31/01/18,10,0,30,
+01/02/18,12,0,35,
+03/02/18,17,0,35,
+04/02/18,22,0,45,
+05/02/18,22,0,45,
+17/02/18,37,0,55,
+19/02/18,37,0,60,
+13/03/18,53,11,70,8 nests not in the nest dataset
+17/03/18,64,28,80,"49 nest followed, 15 un-followed new nests"
+01/04/18,66,41,75,"49 nest followed, 17 unfollowed new nests"
+04/04/18,66,63,120,11 of the unfollowed nests hatched
+08/04/18,65,105,100,"17 unfollowed nests, 15 hatched, two disappeared"
+14/04/18,63,126,150,"17 unfollowed nests, 15 hatched, two disappeared"
+21/04/18,63,137,100,"17 unfollowed nests, 15 hatched, two disappeared"
+13/05/18,60,132,100,"17 unfollowed nests, 15 hatched, two disappeared"
+03/06/18,7,15,200,Handful of nests still around
+24/06/18,5,10,100,Handful of nests still around

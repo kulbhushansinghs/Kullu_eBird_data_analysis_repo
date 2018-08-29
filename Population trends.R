@@ -30,7 +30,7 @@ dat.jakkur.species<-subset(dat.jakkur,
                           dat.jakkur$COMMON.NAME == unique(dat.jakkur$COMMON.NAME)[i], 
                           select = c(OBSERVATION.DATE, OBSERVATION.COUNT, COMMON.NAME, Juliandate))
 
-if(length(dat.jakkur.species$COMMON.NAME) <= 10000 & length(dat.jakkur.species$COMMON.NAME) >= 10){
+if(length(dat.jakkur.species$COMMON.NAME) <= 10000 & length(dat.jakkur.species$COMMON.NAME) >= 100){
 thegam <- gam(OBSERVATION.COUNT[which(Juliandate>0)] ~ s(Juliandate[which(Juliandate>0)]), 
               data = dat.jakkur.species)
 plot(thegam, residuals = T, main = unique(dat.jakkur$COMMON.NAME)[i], 
@@ -62,3 +62,4 @@ with(dat.Jakkur.pstork,
 thegam <- gam(OBSERVATION.COUNT[which(Juliandate>0)]~ s(Juliandate[which(Juliandate>0)]), 
               data = dat.Jakkur.pstork)
 plot(thegam, residuals = T, main = "test")
+

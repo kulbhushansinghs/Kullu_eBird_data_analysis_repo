@@ -4,6 +4,7 @@ require(tidyr)
 require(reshape2)
 library(ggplot2)
 
+#setting working directory and importing data
 setwd("/Users/Kullu/Dropbox (Snow Leopard Trust)/Kullu_desktop/Git/Kullu_eBird_data_analysis_repo/Jakkur data")
 dat.nest <- read.csv("Jukkur painted Stork nest data.csv")
 dat.pop <- read.csv("Jukkur painted Stork population data.csv")
@@ -88,7 +89,7 @@ ggplot(dat.cohort, aes(x = Survey.date, y = Number.of.nests, color = State.of.ne
   geom_line(size = 0.8) +
   geom_point(size = 2) + 
   scale_color_manual(values = c("forest green", "blue", "red", "black", "darkblue"), 
-                     name = "State of the nest", 
+                     name = "Nest phase", 
                      labels = c("Fledglings", "Incubation", "Abandoned", "Total nests", "Nestlings")) +
   labs(x = "Month", y = "Number of Nests", size = 10) 
 

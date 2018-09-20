@@ -5,10 +5,10 @@ library(dplyr)
 library(mgcv)
 library(ggplot2)
 ## Setting working directory and importing data
-setwd("/Users/Kullu/Dropbox (Snow Leopard Trust)/Kullu_desktop/Git/Kullu_eBird_data_analysis_repo/Jakkur data/ebd_paisto1_prv_relMay-2018")
-dat<-read.csv("ebd_paisto1_prv_relMay-2018.txt", header = T, sep = "\t", fill = T )
-setwd("/Users/Kullu/Dropbox (Snow Leopard Trust)/Kullu_desktop/Git/Kullu_eBird_data_analysis_repo/Jakkur data/ebd_spbpel1_relMay-2018")
-dat.peli<- read.csv("ebd_spbpel1_relMay-2018.txt", header = T, sep = "\t", fill = T )
+setwd("/Users/Kullu/Dropbox (Snow Leopard Trust)/Kullu_desktop/Git/Kullu_eBird_data_analysis_repo/Jakkur data/ebd_paisto1_relAug-2018")
+dat<-read.csv("ebd_paisto1_relAug-2018.txt", header = T, sep = "\t", fill = T )
+setwd("/Users/Kullu/Dropbox (Snow Leopard Trust)/Kullu_desktop/Git/Kullu_eBird_data_analysis_repo/Jakkur data/ebd_spbpel1_relAug-2018")
+dat.peli<- read.csv("ebd_spbpel1_relAug-2018.txt", header = T, sep = "\t", fill = T )
 
 
 
@@ -32,19 +32,19 @@ dat.jakkur.plot<- subset(dat.jakkur, OBSERVATION.DATE > "2014-01-01")
 plot1<- ggplot(dat.jakkur.plot, 
                aes (x = OBSERVATION.DATE, y = OBSERVATION.COUNT)) +
   geom_rect(mapping = aes(xmin = as.Date("2014-01-15"), 
-                          xmax = as.Date("2014-06-15"), ymin = 0, ymax = 120, fill = t), 
+                          xmax = as.Date("2014-06-15"), ymin = 0, ymax = 200, fill = t), 
             fill = 7,  alpha = 0.005)+
   geom_rect(mapping = aes(xmin = as.Date("2015-01-15"), 
-                          xmax = as.Date("2015-06-15"), ymin = 0, ymax = 120, fill = t), 
+                          xmax = as.Date("2015-06-15"), ymin = 0, ymax = 200, fill = t), 
             fill = 7,  alpha = 0.005)+
   geom_rect(mapping = aes(xmin = as.Date("2016-01-15"), 
-                          xmax = as.Date("2016-06-15"), ymin = 0, ymax = 120, fill = t), 
+                          xmax = as.Date("2016-06-15"), ymin = 0, ymax = 200, fill = t), 
             fill = 7,  alpha = 0.005)+
   geom_rect(mapping = aes(xmin = as.Date("2017-01-15"), 
-                          xmax = as.Date("2017-06-15"), ymin = 0, ymax = 120, fill = t), 
+                          xmax = as.Date("2017-06-15"), ymin = 0, ymax = 200, fill = t), 
             fill = 7,  alpha = 0.005)+
   geom_rect(mapping = aes(xmin = as.Date("2018-01-15"), 
-                          xmax = as.Date("2018-06-15"), ymin = 0, ymax = 120, fill = t), 
+                          xmax = as.Date("2018-06-15"), ymin = 0, ymax = 200, fill = t), 
             fill = 7,  alpha = 0.005)+
   theme_gray(base_size = 12)+
   geom_point(alpha = 0.5, color = "blue", size = 3)+
